@@ -88,9 +88,9 @@
     <string name="amputation_left_leg">Левая нога</string>
     <string name="amputation_right_leg">Правая нога</string>
     <string name="user_detail_label_activity_level">Уровень активности</string>
-    <string name="user_detail_label_assisted_weighting">Вспомогательное взвешивание</string>
+    <string name="user_detail_label_assisted_weighting">Взвешивание с поддержкой</string>
     <string name="dialog_title_select_reference_user_for">Выберите вспомогательного пользователя для %1$s</string>
-    <string name="error_no_reference_users_available">Нет подходящего вспомогательного пользователя. Пожалуйста, сначала создайте пользователя без параметра \"Вспомогательное измерение\".</string>
+    <string name="error_no_reference_users_available">Нет подходящих опорных пользователей. Создайте пользователя, который не использует взвешивание с поддержкой.</string>
     <string name="error_assisted_weighing_reference_user_missing">Для вспомогательного измерения необходимо выбрать содействующего пользователя.</string>
     <string name="user_detail_label_birth_date">Дата рождения</string>
     <string name="user_detail_error_invalid_data">Пожалуйста укажите корректные данные</string>
@@ -234,8 +234,8 @@
     <string name="label_optional">%1$s (необязательно)</string>
     <!-- %1$s is a field label -->
     <string name="content_desc_select_date">Выбор даты</string>
-    <string name="my_goals_label">Мои достижения</string>
-    <string name="user_detail_goals">Достижения %d</string>
+    <string name="my_goals_label">Мои цели</string>
+    <string name="user_detail_goals">Цели %d</string>
     <string name="user_detail_no_goals">Нет целей</string>
     <string name="delete_button_label">Удалить</string>
     <string name="dialog_title_edit_goal">Редактирование цели: %1$s</string>
@@ -355,7 +355,7 @@
     <string name="found_devices_label">Найденные устройства:</string>
     <string name="device_saved_as_preferred">Весы \'%1$s\' сохранены как предпочитаемые.</string>
     <string name="device_not_supported">%1$s на данный момент не поддерживается.</string>
-    <string name="no_devices_found_start_scan">Устройств не найдено. Начать новый поиск.</string>
+    <string name="no_devices_found_start_scan">Устройств не найдено. Начните новый поиск.</string>
     <string name="saved_scale_icon_desc">Значок сохранённых весов</string>
     <string name="supported_icon_desc">Значок поддерживаемого устройства</string>
     <string name="not_supported_icon_desc">Значок неподдерживаемого устройства</string>
@@ -389,10 +389,10 @@
     <!-- Bluetooth Detail Screen -->
     <string name="title_device_settings_for">Настройка %1$s</string>
     <string name="bluetooth_tuning_title">Управление Bluetooth</string>
-    <string name="tuning_profile_label">Управление Профилем</string>
+    <string name="tuning_profile_label">Настройки профиля</string>
     <string name="bluetooth_measurement_title">Измерение через Bluetooth</string>
     <string name="smart_assignment_assignment">Интеллектуальное назначение пользователя</string>
-    <string name="tolerance_label">Выносливость</string>
+    <string name="tolerance_label">Допуск</string>
     <string name="ignore_outside_tolerance_title">Игнорирование неопределённых значений</string>
     <string name="ignore_outside_tolerance_desc">Если измерение выходит за пределы допустимых значений для всех пользователей, оно не будет сохранено.</string>
     <string name="device_actions_title">Действия над устройством</string>
@@ -403,7 +403,7 @@
     <string name="tuning_balanced">Сбалансированный</string>
     <string name="tuning_conservative">Умеренный</string>
     <string name="tuning_aggressive">Высокая производительность</string>
-    <string name="tolerance_desc">Максимальное отклонение веса, автоматически назначаемое пользователю.</string>
+    <string name="tolerance_desc">Макс. отклонение веса для автоматического назначения пользователю.</string>
     <string name="developer_section_title">Разработчик</string>
     <string name="danger_zone_title">Опасная зона</string>
     <string name="auto_connect_on_startup_title">Автоматическое соединение при запуске</string>
@@ -655,8 +655,8 @@
     <!-- About Screen & Diagnostics -->
     <string name="version_info">Версия: %1$s (%2$s)</string>
     <string name="project_information_title">Информация о проекте</string>
-    <string name="maintainer_label">Сопровождающий</string>
-    <string name="maintainer_icon_content_description">Значок сопровождающего</string>
+    <string name="maintainer_label">Разработчик</string>
+    <string name="maintainer_icon_content_description">Иконка разработчика</string>
     <string name="project_homepage_display">Проект на GitHub</string>
     <string name="official_project_page_label">Официальная страница проекта</string>
     <string name="homepage_icon_content_description">Значок домашней страницы</string>
@@ -971,4 +971,52 @@
     <string name="measurement_type_hydration_shift">Изменение распределения воды</string>
     <string name="bt_error_mi_scale_service_missing">На устройстве отсутствует поддерживаемый сервис Mi Scale.</string>
     <string name="bt_warn_mi_scale_variant_downgraded">Весы определяются как модель v2, но передают только вес. Измерение состава тела на этом устройстве недоступно.</string>
+    <string name="hs2s_device_key_label">Ключ устройства</string>
+    <string name="hs2s_device_key_description">Оригинальным весам Wyze Scale (WHSCL1) требуется 32-символьный ключ устройства, получаемый из облака Wyze. Для весов iHealth HS2S и HS2S Pro ключ не требуется.</string>
+    <string name="hs2s_device_key_error">Ключ устройства должен содержать ровно 32 hex символа</string>
+    <string name="bt_hs2s_missing_device_key">Wyze Scale: ключ устройства не настроен. Перейдите в настройки Bluetooth, чтобы ввести его.</string>
+    <string name="bt_hs2s_wrong_device_key">Аутентификация весов не удалась: ключ устройства не соответствует этим весам.</string>
+    <string name="bt_hs2s_auth_failed">Весы отклонили аутентификацию.</string>
+    <string name="bt_warn_qardio_users_full">QardioBase не имеет свободных пользовательских слотов. Сбросьте весы в настройках устройства, чтобы удалить всех пользователей, затем подключитесь снова.</string>
+    <string name="bt_info_qardio_updating">Обновление весов…</string>
+    <string name="bt_info_qardio_updated">Весы обновлены.</string>
+    <string name="bt_warn_qardio_other_user">Взвешивание %1$s не сохранено: весы назначили его пользователю «%2$s». Если это были вы, сойдите с весов и нажимайте на середину весов, пока указатель не окажется на вашем имени.</string>
+    <string name="bt_info_qardio_guest">Весы не распознали вас. Сойдите с весов и нажимайте на середину весов, пока указатель не окажется на вашем имени.</string>
+    <string name="bt_warn_qardio_profile_timeout">Весы перестали отвечать во время сохранения вашего профиля. Подключитесь снова, чтобы повторить попытку.</string>
+    <string name="bt_warn_qardio_config_timeout">Весы не перешли в режим настроек, поэтому ваш профиль не был отправлен. Сойдите с весов и подключитесь снова, чтобы повторить попытку.</string>
+    <string name="bt_warn_qardio_reset_timeout">Весы не подтвердили сброс. Попытка будет повторена при следующем подключении.</string>
+    <string name="bt_warn_qardio_guest_not_saved">Взвешивание %1$s не сохранено: весы не распознали вас. В следующий раз сойдите с весов и нажимайте на середину весов, пока указатель не окажется на вашем имени.</string>
+    <string name="qardio_section_info">Весы</string>
+    <string name="qardio_info_none">Подключитесь один раз, чтобы получить сведения о весах.</string>
+    <string name="qardio_info_model">Модель</string>
+    <string name="qardio_info_firmware">Прошивка</string>
+    <string name="qardio_info_software">Программное обеспечение</string>
+    <string name="qardio_info_battery_value">%1$d%%</string>
+    <string name="qardio_info_profiles">Профили</string>
+    <string name="qardio_info_profile_other">другие (не с этого устройства)</string>
+    <string name="qardio_section_scale">Настройки весов</string>
+    <string name="qardio_section_phone">Это устройство</string>
+    <string name="qardio_section_maintenance">Обслуживание</string>
+    <string name="qardio_action_resend">Отправить повторно</string>
+    <string name="qardio_action_reset">Сброс</string>
+    <string name="qardio_config_resend_pending">Профили будут отправлены при следующем подключении.</string>
+    <string name="qardio_config_impedance">Состав тела</string>
+    <string name="qardio_config_impedance_desc">Измеряет жир, воду, мышцы и кости с помощью слабого электрического тока. Отключите для людей с кардиостимулятором или другим имплантом, а также во время беременности.</string>
+    <string name="qardio_config_haptic">Вибрация</string>
+    <string name="qardio_config_haptic_desc">Весы вибрируют при включении, после завершения измерения и при изменении настроек.</string>
+    <string name="qardio_config_scale_wide_pending">Изменение ожидает отправки: будет отправлено при следующем подключении.</string>
+    <string name="qardio_config_save_guest">Сохранять гостевые взвешивания</string>
+    <string name="qardio_config_save_guest_desc">Сохраняет взвешивания, которые весы не распознали, для активного пользователя. Используйте только в том случае, если весами больше никто не пользуется.</string>
+    <string name="bt_info_qardio_resetting">Сброс весов и удаление всех пользователей…</string>
+    <string name="qardio_config_description">openScale поддерживает профиль активного пользователя на весах в актуальном состоянии. Весы отображают имена строчными буквами, длиной до 6 букв или цифр.</string>
+    <string name="qardio_config_select_on_connect">Выбирать мой профиль при подключении</string>
+    <string name="qardio_config_select_on_connect_desc">Сообщает весам, что следующее взвешивание принадлежит активному пользователю openScale, как это делало официальное приложение. Весы по-прежнему могут распознать другого пользователя.</string>
+    <string name="qardio_config_resend_profiles">Повторно отправить профили</string>
+    <string name="qardio_config_reset">Сбросить весы</string>
+    <string name="qardio_config_reset_desc">При следующем подключении удаляет всех пользователей и сеть Wi-Fi и восстанавливает настройки весов по умолчанию. При последующем подключении ваш профиль будет добавлен снова.</string>
+    <string name="qardio_config_reset_legacy">Устаревший сброс (экспериментально)</string>
+    <string name="qardio_config_reset_legacy_desc">Сброс из приложения Qardio для прошивки старше версии 1.8. Используйте его только в том случае, если обычный сброс не работает.</string>
+    <string name="qardio_config_resend_profiles_desc">Повторно отправляет профиль каждого пользователя openScale на этом телефоне при его следующем подключении.</string>
+    <string name="bt_info_qardio_reset_done">Весы сброшены. Ваш профиль будет добавлен снова при следующем подключении весов.</string>
+    <string name="qardio_config_reset_pending">Ожидает выполнения: весы будут сброшены при следующем подключении этого телефона.</string>
 </resources>
